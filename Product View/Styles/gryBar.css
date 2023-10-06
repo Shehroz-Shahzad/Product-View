@@ -1,0 +1,50 @@
+
+.gryBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f6f6f8;
+    padding-inline: 15%;
+}
+
+.menu{
+    margin: 1em 0;
+}
+.menu a:hover{
+    text-decoration: underline;
+}
+
+.options{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    line-height: 1rem;
+    margin: 0px;
+}
+
+.options li{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+li span{
+    font-size: x-small;
+    font-weight: 200;
+    margin-inline: 3.2px;
+}
+
+.gryBarIcon{
+    display: flex;
+    align-items: center;
+}
+
+.gryBarIcon a{
+    margin: 10px;
+}
+
+@media (max-width: 768px) {
+    .gryBar{
+        padding-inline: 2%;
+    }
+    /* Add any additional responsive styling as needed */
+}

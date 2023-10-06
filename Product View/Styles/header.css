@@ -1,0 +1,200 @@
+.top-header {
+    padding: 10px 0;
+}
+
+.header-class {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.menu-options {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    flex-wrap: wrap;
+    /* Allow menu items to wrap on smaller screens */
+}
+
+.menu-options li {
+    position: relative;
+}
+
+.menu-options a {
+    text-decoration: none;
+    color: #000000;
+    position: relative;
+}
+
+.menu-options a:hover {
+    color: #ffc107;
+}
+
+.new-in-li{
+    animation-name: heartFadeInOut;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+.new-in {
+    background: #87bafd;
+    border-radius: 50px;
+    padding: 4px 10px !important;
+}
+
+.bi-chevron-down {
+    margin-left: 5px;
+    font-size: 0.8rem;
+}
+
+.icons-options {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.icons-options li {
+    display: inline-block;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.search-icon svg,
+.profile-icon svg,
+.heart-icon svg,
+.cart-icon svg {
+    fill: #000000;
+}
+
+
+@keyframes heartFadeInOut {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(.97);
+    }
+
+    35% {
+        transform: scale(.9);
+    }
+
+    45% {
+        transform: scale(1.1);
+    }
+
+    55% {
+        transform: scale(.9);
+    }
+
+    65% {
+        transform: scale(1.1);
+    }
+
+    75% {
+        transform: scale(1.03);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.hamburger-menu {
+    display: none; /* Initially hidden on larger screens */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #000000;
+    margin: 3px 0;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .header-class{
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .none,.profile-icon svg,
+    .heart-icon svg{
+        display: none;
+    }
+
+    .icons-options{
+        gap: 5px;
+    }
+
+    /* Add any additional responsive styling as needed */
+}
+
+
+/* ==================================  CSS For Side Menu  ================================== */
+
+.menu-container {
+    position: fixed;
+    top: 20%;
+    font-size: 16px;
+    width: 90%;
+    height: 100%;
+    background: white;
+    left: -91%;
+    box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 9999999;
+}
+
+.ham-heading {
+    text-align: center;
+    background: #e7e4e4;
+    padding: 5px 10px;
+    height: 55px;
+    max-width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid rgb(0 0 0);
+}
+
+
+.ham-li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    height: 33px;
+    border-bottom: 1px solid rgba(129, 129, 129, .2);
+}
+
+.plus{
+    padding: 5px;
+    border-left: 1px solid rgba(129, 129, 129, .2);
+}

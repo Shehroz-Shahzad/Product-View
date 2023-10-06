@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+</head>
+<body>
+    <div class="img-box">
+        <div class="img-div">
+            <i href="#" class="leftArrow prevButton">&lt;</i>
+            <img id="productImg" src="../images/s1.png" alt="Image" loading="lazy">
+            <i href="#" class="rightArrow nextButton">&gt;</i>
+        </div>
+    </div>
+
+    <script>
+        // Get references to the prevButton, nextButton, and productImg elements
+        const prevButton = document.querySelector('.prevButton');
+        const nextButton = document.querySelector('.nextButton');
+        const productImg = document.getElementById('productImg');
+
+        // Define an array of image sources
+        const imageSources = ['../images/s1.png', '../images/s2.png', '../images/s3.png'];
+
+        // Initialize a variable to keep track of the current image index
+        let currentImageIndex = 0;
+
+        // Event listener for the previous button
+        prevButton.addEventListener('click', () => {
+            currentImageIndex--;
+            if (currentImageIndex < 0) {
+                currentImageIndex = imageSources.length - 1; // Wrap around to the last image
+            }
+            productImg.src = imageSources[currentImageIndex];
+        });
+
+        // Event listener for the next button
+        nextButton.addEventListener('click', () => {
+            currentImageIndex++;
+            if (currentImageIndex >= imageSources.length) {
+                currentImageIndex = 0; // Wrap around to the first image
+            }
+            productImg.src = imageSources[currentImageIndex];
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Example</title>
+    <style>
+        /* Add your CSS styles here */
+        .cart-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cart-container" id="cart">
+        <div class="cart-content">
+            <h2>Shopping Cart</h2>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be displayed here -->
+            </div>
+            <div class="total-price" id="total-price">
+                <!-- Total price will be displayed here -->
+            </div>
+        </div>
+    </div>
+    <div>
+        <form>
+            <h1 id="productName">BM5176-DARKBROWN</h1>
+            <p id="productPrice">PKR 10500</p>
+            <h2>COLOR: <span id="productColor">Not Selected</span></h2>
+            <h2>SIZE: <span id="productSize">35</span></h2>
+            <div class="quantity">
+                <a class="qbtn1" onclick="decreaseValue()">
+                    <!-- Minus icon -->
+                </a>
+                <input class="btnqun" type="text" id="quantity" value="0" onchange="updateTotalPrice()">
+                <a class="qbtn2" onclick="increaseValue()">
+                    <!-- Plus icon -->
+                </a>
+            </div>
+            <div class="add-wish">
+                <button class="addToCart" type="button" id="addToCartButton" onclick="addProductToCart()">
+                    Add to cart
+                </button>
+                <button class="addWishList">
+                    <!-- Heart icon -->
+                </button>
+            </div>
+            <div class="stock">
+                <span class="s1">Barcode:<span id="barcode">O00GLT004</span></span>
+                <span class="s2">Availability: <span>In Stock</span></span>
+            </div>
+            <div class="ex-policy">
+                <a href="" aria-label="">Size Chart</a>
+                <a href="" aria-label="">Exchange Policy</a>
+                <a href="" aria-label="">Ask a Question</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Define an array to store cart items
+        var cartItems = [];
+
+        // Function to add a product to the cart
+        function addProductToCart() {
+            // Get product information
+            var productName = document.getElementById("productName").innerText;
+            var productPrice = document.getElementById("productPrice").innerText;
+            var productColor = document.getElementById("productColor").innerText;
+            var productSize = document.getElementById("productSize").innerText;
+            var productQuantity = parseInt(document.getElementById("quantity").value);
+            var barcode = document.getElementById("barcode").innerText; // Get the barcode
+
+            // Create a cart item object
+            var cartItem = {
+                name: productName,
+                price: parseFloat(productPrice.replace("PKR ", "")), // Parse the price as a float
+                color: productColor,
+                size: productSize,
+                quantity: productQuantity,
+                barcode: barcode // Include the barcode
+            };
+
+            // Add the cart item to the cartItems array
+            cartItems.push(cartItem);
+
+            // Update the cart display and total price
+            updateCartDisplay();
+            updateTotalPrice();
+        }
+
+        // Function to update the cart display
+        function updateCartDisplay() {
+            var cartItemsContainer = document.getElementById("cart-items");
+            cartItemsContainer.innerHTML = ""; // Clear the existing cart items
+
+            // Loop through the cartItems array and create cart item elements
+            for (var i = 0; i < cartItems.length; i++) {
+                var cartItem = cartItems[i];
+                var cartItemElement = document.createElement("div");
+                cartItemElement.className = "cart-item";
+                cartItemElement.innerHTML = `
+                    <p>${cartItem.name}</p>
+                    <p>${cartItem.color}</p>
+                    <p>${cartItem.size}</p>
+                    <p>Quantity: ${cartItem.quantity}</p>
+                    <p>Barcode: ${cartItem.barcode}</p>
+                    <p>Price: PKR ${cartItem.price.toFixed(2)}</p>
+                `;
+                cartItemsContainer.appendChild(cartItemElement);
+            }
+        }
+
+        // Function to update the total price
+        function updateTotalPrice() {
+            var total = 0;
+
+            // Calculate the total price based on cart items
+            for (var i = 0; i < cartItems.length; i++) {
+                var cartItem = cartItems[i];
+                total += cartItem.price * cartItem.quantity;
+            }
+
+            // Display the total price
+            var totalPriceElement = document.getElementById("total-price");
+            totalPriceElement.innerText = "Total Price: PKR " + total.toFixed(2);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+.search{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px 0;
+    transition: right 0.3s ease;
+}
+
+.search-close-button{
+    background: white;
+    border: 0;
+}
+
+#categories,.searchBar{
+    min-width: 100%;
+    min-height: 40px;
+    padding: 0 5px;
+}

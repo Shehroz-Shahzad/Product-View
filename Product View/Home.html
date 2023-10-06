@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/gryBar.css">
+    <link rel="stylesheet" href="Styles/productdetail.css">
+    <link rel="stylesheet" href="Styles/cart.css">
+    <link rel="stylesheet" href="Styles/recentView.css">
+    <link rel="stylesheet" href="Styles/header.css">
+    <link rel="stylesheet" href="Styles/search.css">
+    <title>Product Page</title>
+</head>
+
+<body>
+    <header class="top-header">
+        <div class="header-class">
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="logo">
+                <img src="../images/logo.avif" alt="">
+            </div>
+            <nav class="none">
+                <ul class="menu-options">
+                    <li class="new-in-li">
+                        <a class="new-in"> New In
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </a>
+                        <ul class="new-in-ul" style="display: none;">
+                            <li> <a href=""> Men </a> </li>
+                            <li> <a href=""> Women </a> </li>
+                            <li> <a href=""> Bag & Jewellery </a></li>
+                            <li> <a href=""> Sports </a> </li>
+                            <li> <a href=""> Bundles </a> </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a> Pre Winter
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a> Premium
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a> Summer
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a> Women
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a> Men
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a> Kids
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a> Bags
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a> Accessories
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a> Brands
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="menu-container">
+                <div class="ham-heading">
+                    <h4>MENU</h4>
+                </div>
+                <ul class="hamburger-options">
+                    <li class="ham-li">
+                        <div>
+                            <a href="http://">New In</a>
+                        </div>
+                        <div class="plus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-plus" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="ham-li">
+                        <div>
+                            <a href="http://">Pre Winter</a>
+                        </div>
+                        <div class="plus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-plus" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="ham-li">
+                        <div>
+                            <a href="http://">Summer</a>
+                        </div>
+                        <div class="plus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-plus" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="ham-li">
+                        <div>
+                            <a href="http://">Women</a>
+                        </div>
+                        <div class="plus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-plus" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="ham-li">
+                        <div>
+                            <a href="http://">Men</a>
+                        </div>
+                        <div class="plus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-plus" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                            </svg>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div>
+                <ul class="icons-options">
+                    <li class="search-icon" onclick="openSearch()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </li>
+                    <li class="profile-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-person" viewBox="0 0 16 16">
+                            <path
+                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                        </svg>
+                    </li>
+                    <li class="heart-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-suit-heart" viewBox="0 0 16 16">
+                            <path
+                                d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
+                        </svg>
+                    </li>
+                    <li class="cart-icon" onclick="openCart()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-cart-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="allHiden">
+        <!-- Shopping cart layout starts from here -->
+        <div class="cart-container" id="cart" style="z-index: 99999;">
+            <div class="cart-content">
+                <div class="cartHeading">
+                    <h2>Your Cart</h2>
+                    <button type="button" class="cart-close-button" onclick="closeCart()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                            class="bi bi-x-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                            <path
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </button>
+                </div>
+                <table id="cart-table">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Product</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items">
+                        <!-- Cart items will be added here dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Shopping cart layout ends here -->
+
+        <!-- ========================================================================================================= -->
+
+        <!-- Search Option layout starts from here -->
+        <div class="cart-container" id="search" style="z-index: 99999;">
+            <div class="cart-content">
+                <div class="search">
+                    <button type="button" class="search-close-button" onclick="closeSearch()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                            class="bi bi-x-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                            <path
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </button>
+                </div>
+                <div>
+                    <div style="margin: 5px 0;">
+                        <select id="categories">
+                            <option value="All Categories">All Categories</option>
+                            <option value="Athleisure Joggers For Boys & Girls">Athleisure Joggers For Boys & Girls</option>
+                            <option value="Bouquet of 5">Bouquet of 5</option>
+                            <option value="Boys Casual Sliders">Boys Casual Sliders</option>
+                            <option value="Card Holder For Men">Card Holder For Men</option>
+                            <option value="Cross Body Bag For Girls">Cross Body Bag For Girls</option>
+                            <option value="For He and his She">For "He" and his "She"</option>
+                            <option value="Freedom">Freedom</option>
+                            <option value="Girl Sandals">Girl Sandals</option>
+                            <option value="Girl Slippers">Girl Slippers</option>
+                        </select>
+                    </div>
+                    <div style="margin: 5px 0;">
+                        <input type="search" name="" id="" class="searchBar">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Search Option layout ends here -->
+    </section>
+
+    <header>
+        <div class="gryBar">
+            <div class="menu">
+                <ul class="options">
+                    <li><a href="">Home</a> <span>&gt;</span></li>
+                    <li><a href="">All Product</a><span>&gt;</span></li>
+                    <li><a href="">Men Tranding</a><span>&gt;</span></li>
+                    <li><a href="" style="color: #476154;">BM5176-BLACK</a></li>
+                </ul>
+            </div>
+            <div class="gryBarIcon">
+                <a href="" style="font-size: 16px;">&lt;</a>
+                <a href="" class="svgIcon">
+                    <svg width="18px" height="18px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                        fill="#000000">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <title></title>
+                            <g id="Complete">
+                                <g id="grid">
+                                    <g>
+                                        <rect fill="none" height="7" stroke="#000000" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" width="7" x="14.5" y="2.5"></rect>
+                                        <rect fill="none" height="7" stroke="#000000" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" width="7" x="14.5" y="14.5"></rect>
+                                        <rect fill="none" height="7" stroke="#000000" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" width="7" x="2.5" y="2.5"></rect>
+                                        <rect fill="none" height="7" stroke="#000000" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" width="7" x="2.5" y="14.5"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+                <a href="" style="font-size: 16px;">&gt;</a>
+            </div>
+        </div>
+    </header>
+    <!-- Product Details start from here -->
+    <section class="section01">
+        <div class="firstDiv">
+            <div class="main">
+                <div class="img-box">
+                    <div class="gallery">
+                        <ul>
+                            <li onclick="changeImage('images/s1.png')"><a class="img-li" href="#"><img class="click-able"
+                                        src="images/s1.png" alt="Image" loading="lazy"></a></li>
+                            <li onclick="changeImage('images/s2.png')"><a class="img-li" href="#"><img class="click-able"
+                                        src="images/s2.png" alt="Image" loading="lazy"></a></li>
+                            <li onclick="changeImage('images/s3.png')"><a class="img-li" href="#"><img class="click-able"
+                                        src="images/s3.png" alt="Image" loading="lazy"></a></li>
+                        </ul>
+                    </div>
+                    <div class="img-div">
+                        <i href="#" class="leftArrow prevButton">&lt;</i>
+                        <img id="productImg" src="images/s1.png" alt="Image" loading="lazy">
+                        <i href="#" class="rightArrow nextButton">&gt;</i>
+                    </div>
+                </div>
+            </div>
+            <!-- Shopping cart layout starts from here -->
+            <div class="cart-container" id="cart" style="z-index: 99999;">
+                <div class="cart-content">
+                    <div class="cartHeading">
+                        <h2>Your Cart</h2>
+                        <button type="button" class="cart-close-button" onclick="closeCart()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                class="bi bi-x-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                <path
+                                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <table id="cart-table">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Product</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-items">
+                            <!-- Cart items will be added here dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Shopping cart layout ends here -->
+            <div class="right">
+
+                <div class="content-box">
+                    <form>
+                        <h1 id="productName">BM5176-DARKBROWN</h1>
+                        <div class="price">
+                            <p id="productPrice">PKR 10,500</p>
+                        </div>
+                        <div class="para">
+                            <p>Show off your suave style with the BM5176 formal Lace Up's. Crafted with high quality
+                                material, these men's dress shoes offer luxurious comfort along with a sophisticated
+                                look.
+                                Perfect for any dressy occasion, these shoes will make a lasting impression.</p>
+                        </div>
+                        <div class="product">
+
+                            <div class="product-detail">
+                                <div class="p-d">
+                                    <h2>COLOR: <span id="colorName">Not Selected</span></h2>
+                                    <div class="square"><img src="images/darkbrown.png" alt="DARKBROWN" id="colorImage">
+                                    </div>
+                                    <h2>SIZE: <span id="productSize"></span></h2>
+                                    <ul class="size">
+                                        <li><a href="#" class="span-li" id="shoesSize" onclick="updateSize('36')">36</a>
+                                        </li>
+                                        <li><a href="#" class="span-li" id="shoesSize" onclick="updateSize('37')">37</a>
+                                        </li>
+                                        <li><a href="#" class="span-li" id="shoesSize" onclick="updateSize('38')">38</a>
+                                        </li>
+                                        <li><a href="#" class="span-li" id="shoesSize" onclick="updateSize('39')">39</a>
+                                        </li>
+                                        <li><a href="#" class="span-li" id="shoesSize" onclick="updateSize('40')">40</a>
+                                        </li>
+                                        <li><a href="#" class="span-li" id="shoesSize" onclick="updateSize('41')">41</a>
+                                        </li>
+                                        <li><a href="#" class="span-li" id="shoesSize" onclick="updateSize('42')">42</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="quantity">
+                                <a class="qbtn1" onclick="decreaseValue()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-dash" viewBox="0 0 16 16">
+                                        <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                                <input class="btnqun" type="text" id="quantity" value="1">
+                                <a class="qbtn2" onclick="increaseValue()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-plus" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="add-wish">
+                                <button type="button" class="addToCart" id="addToCartButton"
+                                    onclick="addProductToCart()">Add
+                                    to cart</button>
+                                <button class="addWishList">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-heart" viewBox="0 0 16 16">
+                                        <path
+                                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="stock">
+                            <span class="s1">Barcode:<span id="barcode">O00GLT004</span></span>
+                            <span class="s2">Availability: <span>In Stock</span></span>
+                        </div>
+                        <div class="ex-policy">
+                            <a href="" aria-label="">Size Chart</a>
+                            <a href="" aria-label="">Exchange Policy</a>
+                            <a href="" aria-label="">Ask a Questionc</a>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <!-- Product detail ends here -->
+
+    <!-- Recently viewed Products start from here -->
+    <section class="section02">
+        <div class="head">
+            <h5 class="section-heading"><b>YOU MAY ALSO LIKE</b></h5>
+        </div>
+
+        <div class="section-no-04">
+            <div class="Products" id="scrollProduct">
+                <div class="scroll-icons leftbtn" id="scrollLeft">
+                    &lt;
+                </div>
+                <div class="item">
+                    <img src="images/m1.png" alt="" loading="lazy">
+                    <br>
+                    <div class="icons">
+                        <button class="icon2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-cart-x-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7.354 5.646 8.5 6.793l1.146-1.147a.5.5 0 0 1 .708.708L9.207 7.5l1.147 1.146a.5.5 0 0 1-.708.708L8.5 8.207 7.354 9.354a.5.5 0 1 1-.708-.708L7.793 7.5 6.646 6.354a.5.5 0 1 1 .708-.708z" />
+                            </svg></button>
+                        <button class="icon3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
+                                <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+                            </svg></button>
+                    </div>
+                    <div class="selecting">
+                        <div>
+                            <a href="" aria-label=""> 39 </a>|
+                            <a href="" aria-label=""> 40 </a>|
+                            <a href="" aria-label=""> 41 </a>|
+                            <a href="" aria-label=""> 42 </a>|
+                            <a href="" aria-label=""> 43 </a>|
+                            <a href="" aria-label=""> 45 </a>
+                        </div>
+                        <div>
+                            <a href="" aria-label="" style="color: black;">BM4548-TAN</a>
+                            <p>PKR 4,5000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/m2.png" alt="" loading="lazy">
+                    <br>
+                    <div class="icons">
+                        <button class="icon2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-cart-x-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7.354 5.646 8.5 6.793l1.146-1.147a.5.5 0 0 1 .708.708L9.207 7.5l1.147 1.146a.5.5 0 0 1-.708.708L8.5 8.207 7.354 9.354a.5.5 0 1 1-.708-.708L7.793 7.5 6.646 6.354a.5.5 0 1 1 .708-.708z" />
+                            </svg></button>
+                        <button class="icon3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
+                                <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+                            </svg></button>
+                    </div>
+                    <div class="selecting">
+                        <div>
+                            <a href="" aria-label=""> 39 </a>|
+                            <a href="" aria-label=""> 40 </a>|
+                            <a href="" aria-label=""> 41 </a>|
+                            <a href="" aria-label=""> 42 </a>|
+                            <a href="" aria-label=""> 43 </a>|
+                            <a href="" aria-label=""> 45 </a>
+                        </div>
+                        <div>
+                            <a href="" aria-label="" style="color: black;">BM4254-MAROON</a>
+                            <p>PKR 7,000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/brown-bag.png" alt="" loading="lazy">
+                    <br>
+                    <div class="icons">
+                        <button class="icon2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-cart-x-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7.354 5.646 8.5 6.793l1.146-1.147a.5.5 0 0 1 .708.708L9.207 7.5l1.147 1.146a.5.5 0 0 1-.708.708L8.5 8.207 7.354 9.354a.5.5 0 1 1-.708-.708L7.793 7.5 6.646 6.354a.5.5 0 1 1 .708-.708z" />
+                            </svg></button>
+                        <button class="icon3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
+                                <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+                            </svg></button>
+                    </div>
+                    <div class="selecting">
+                        <div>
+                            <a href="" aria-label=""> 39 </a>|
+                            <a href="" aria-label=""> 40 </a>|
+                            <a href="" aria-label=""> 41 </a>|
+                            <a href="" aria-label=""> 42 </a>|
+                            <a href="" aria-label=""> 43 </a>|
+                            <a href="" aria-label=""> 45 </a>
+                        </div>
+                        <div>
+                            <a href="" aria-label="" style="color: black;">Style With Comfort</a>
+                            <p>PKR 5,500</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/black-bag.png" alt="" loading="lazy">
+                    <br>
+                    <div class="icons">
+                        <button class="icon2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-cart-x-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7.354 5.646 8.5 6.793l1.146-1.147a.5.5 0 0 1 .708.708L9.207 7.5l1.147 1.146a.5.5 0 0 1-.708.708L8.5 8.207 7.354 9.354a.5.5 0 1 1-.708-.708L7.793 7.5 6.646 6.354a.5.5 0 1 1 .708-.708z" />
+                            </svg></button>
+                        <button class="icon3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
+                                <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+                            </svg></button>
+                    </div>
+                    <div class="selecting">
+                        <div>
+                            <a href="" aria-label=""> 39 </a>|
+                            <a href="" aria-label=""> 40 </a>|
+                            <a href="" aria-label=""> 41 </a>|
+                            <a href="" aria-label=""> 42 </a>|
+                            <a href="" aria-label=""> 43 </a>|
+                            <a href="" aria-label=""> 45 </a>
+                        </div>
+                        <div>
+                            <a href="" aria-label="" style="color: black;">In Vogue</a>
+                            <p>PKR 5,300</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/cart-img.png" alt="" loading="lazy">
+                    <br>
+                    <div class="icons">
+                        <button class="icon2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-cart-x-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7.354 5.646 8.5 6.793l1.146-1.147a.5.5 0 0 1 .708.708L9.207 7.5l1.147 1.146a.5.5 0 0 1-.708.708L8.5 8.207 7.354 9.354a.5.5 0 1 1-.708-.708L7.793 7.5 6.646 6.354a.5.5 0 1 1 .708-.708z" />
+                            </svg></button>
+                        <button class="icon3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
+                                <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+                            </svg></button>
+                    </div>
+                    <div class="selecting">
+                        <div>
+                            <a href="" aria-label=""> 39 </a>|
+                            <a href="" aria-label=""> 40 </a>|
+                            <a href="" aria-label=""> 41 </a>|
+                            <a href="" aria-label=""> 42 </a>|
+                            <a href="" aria-label=""> 43 </a>|
+                            <a href="" aria-label=""> 45 </a>
+                        </div>
+                        <div>
+                            <a href="" aria-label="" style="color: black;">Style With Comfort</a>
+                            <p>PKR 6,700</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-icons rightbtn" id="scrollRight">
+                &gt;
+            </div>
+        </div>
+    </section>
+    <!-- Recently viewed Products ends here -->
+
+    <script src="JavaScript/script.js"></script>
+</body>
+
+</html>

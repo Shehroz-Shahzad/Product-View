@@ -1,0 +1,230 @@
+
+.section02 {
+    text-align: center;
+  }
+  .head{
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .head b{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  b::before,b::after{
+    content: "";
+    width: 60px;
+    display: inline-block;
+    height: 2px;
+    background: #222;
+    margin: 0 15px;  
+  }
+
+  .section-no-04 {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .Products {
+    display: flex;
+    overflow-x: auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .Products::-webkit-scrollbar {
+    overflow: hidden;
+  }
+
+  .item {
+    flex: 0 0 24%;
+    margin-top: 30px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .selecting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    padding: 15px;
+  }
+
+  .selecting div {
+    padding: 4px 0;
+  }
+
+
+  /*Icon Buttons*/
+  .icon {
+    display: none;
+    position: absolute;
+    left: 10px;
+    top: 280px;
+  }
+
+  .icons {
+    display: none;
+    position: absolute;
+    top: 55%;
+    left: 45%;
+  }
+
+  .icon1 {
+    padding-left: 15px;
+    margin-top: 10px;
+  }
+
+  .icon2 {
+    border-radius: 70px;
+    transition: all 1s ease 0s;
+  }
+
+  .icon3 {
+    border-radius: 70px;
+    transition: all 1s ease 0s;
+  }
+
+  /* Icon Buttons - Show on hover */
+  .item:hover .icon {
+    display: block;
+  }
+
+  .item:hover .icons {
+    display: block;
+    transition: all 2s ease 0s;
+    transform: translate(65px, 10px);
+  }
+
+  .icon1:hover {
+    animation: pulse 5s infinite;
+  }
+
+  /* Icon Buttons span - Show on hover */
+  .icon span {
+    background-color: rgb(70, 64, 64);
+    color: white;
+    font-size: 10px;
+    padding: 2px;
+    top: -2px;
+  }
+
+  .icons span {
+    background-color: rgb(70, 64, 64);
+    color: white;
+    font-size: 10px;
+    padding: 2px;
+
+  }
+
+  .stext {
+    display: none;
+    position: relative;
+    top: 0px;
+  }
+
+
+  /* Items 'a' tag */
+  .item a,
+  p {
+    text-decoration: none;
+    color: rgb(82, 78, 78);
+    font-size: 15px;
+  }
+
+  .item a:hover {
+    color: black;
+    font-weight: 600;
+  }
+
+  /* Button Style*/
+  .icon2,
+  .icon3 {
+    background-color: #ffffff;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 5px;
+    margin: 2px;
+  }
+
+  .icon2:hover,
+  .icon3:hover {
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+  }
+
+  /* Scroll Icon - Scroll the products */
+  .scroll-icons {
+    position: absolute;
+    top: 30%;
+    font-size: 25px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    border: 2px solid black;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    z-index: 999;
+  }
+
+  .scroll-icons.leftbtn {
+    left: 15px;
+  }
+
+  .scroll-icons.rightbtn {
+    right: 14px;
+  }
+
+  .scroll-icons:hover {
+    opacity: 1;
+    color: #ffffff;
+    background-color: black;
+  }
+
+
+  /*For pumping the heart icon*/
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.95);
+
+    }
+
+    70% {
+      transform: scale(1);
+
+    }
+
+    100% {
+      transform: scale(0.95);
+
+    }
+  }
+
+
+
+
+
+  @media only screen and (max-width: 768px) {
+
+    /* For mobile phones: */
+    .item{
+        flex: 0 0 50%;
+    }
+  }

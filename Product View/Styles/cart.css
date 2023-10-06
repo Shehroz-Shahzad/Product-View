@@ -1,0 +1,171 @@
+.cart-container {
+    position: fixed;
+    top: 0;
+    right: -30%;
+    height: 100%;
+    width: 30%;
+    background-color: white;
+    box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 1;
+}
+
+.cart-content {
+    padding: 20px;
+    padding: 20px;
+    max-height: 80vh;
+    /* Set a maximum height for the cart content */
+    overflow-y: scroll;
+    /* Enable vertical scrolling when content overflows */
+    scroll-behavior: smooth;
+}
+
+.example::-webkit-scrollbar {
+    display: none;
+}
+
+.cart-content p {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.cartHeading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cartHeading button {
+    background-color: white;
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+}
+/*
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+*/
+.cart-icon {
+    cursor: pointer;
+}
+
+.imgClass {
+    width: 30%;
+}
+
+.cartImg {
+    width: 80%;
+    height: auto;
+}
+
+.product-form {
+    padding: 20px;
+}
+
+.product-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.product-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.addToCart{
+    animation-name: heartFadeInOut;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+
+/* ============================================ Shopping Cart Table Style ==============================================*/
+
+
+th {
+    text-align: inherit;
+    font-weight: 100;
+    font-size: large;
+    padding-bottom: 20px;
+}
+
+th::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #e9dfdf;
+    margin: 15px 0 15px 0;
+    position: unset;
+}
+
+.td1 {
+    width: 35%;
+    align-items: baseline;
+}
+
+.gig {
+    font-size: 11px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    color: gray;
+}
+
+.pname {
+    margin-top: 6px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.pname:hover {
+    text-decoration: underline;
+}
+
+.pprice {
+    color: #a5a0a0;
+    font-size: 14px;
+
+}
+
+.pcolor,
+.pq,
+.ptprice,
+.actp,
+.barcode {
+    font-size: 14px;
+    color: darkgrey;
+}
+
+
+.ttp-p {
+    color: black;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+
+.bi-trash3-fill{
+    display: none;
+}
+
+
+
+@media (max-width: 768px) {
+    .cart-container {
+        right: -50%;
+        height: 100%;
+        width: 50%;
+    }
+    /* Add any additional responsive styling as needed */
+}

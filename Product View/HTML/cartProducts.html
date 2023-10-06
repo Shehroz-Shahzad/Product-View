@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .product-list {
+            flex: 2;
+            padding: 20px;
+        }
+
+        .cart {
+            flex: 1;
+            background-color: #f4f4f4;
+            padding: 20px;
+            position: fixed;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            display: none;
+            width: 300px;
+            overflow-y: auto;
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .cart-close-button {
+            background-color: #f4f4f4;
+            color: #000000;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .cart-items {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cart-item {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-item-button {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .add-to-cart-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .subtotal {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .comment-input {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="product-list">
+            <h1>Product List</h1>
+            <ul>
+                <li>Product 1 
+                    <button class="add-to-cart-button"
+                        onclick="addToCart('product1.jpg', 'Product 1', 10.99, 'Red', 'Large', 12.99, '123456789', 10, 1)">Add
+                        to Cart</button>
+                    </li>
+                <li>Product 2 <button class="add-to-cart-button"
+                        onclick="addToCart('product2.jpg', 'Product 2', 19.99, 'Blue', 'Medium', 24.99, '987654321', 8, 1)">Add
+                        to Cart</button></li>
+                <li>Product 3 <button class="add-to-cart-button"
+                        onclick="addToCart('product3.jpg', 'Product 3', 7.99, 'Green', 'Small', 9.99, '456789123', 15, 1)">Add
+                        to Cart</button></li>
+            </ul>
+        </div>
+        <div class="cart" id="cart">
+            <div class="cart-header">
+                <span>Shopping Cart</span>
+                <button class="cart-close-button" onclick="closeCart()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-x-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+            </div>
+            <ul class="cart-items" id="cart-items">
+                <!-- Cart items will be added here dynamically -->
+            </ul>
+            <input type="text" class="comment-input" placeholder="Add a comment..." id="comment-input">
+            <div class="subtotal" id="subtotal">
+                Subtotal: $0.00
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const cart = document.getElementById('cart-container');
+        const cartItems = document.getElementById('cart-items');
+        const commentInput = document.getElementById('comment-input');
+        const subtotalElement = document.getElementById('subtotal');
+
+        let subtotal = 0;
+
+        function addToCart(productImg, productName, price, color, size, actualPrice, barcode, totalPrice, quantity) {
+            // Create a new cart item
+            const cartItem = document.createElement('li');
+            cartItem.classList.add('cart-item');
+            cartItem.innerHTML = `
+                <img src="${productImg}" alt="${productName}" width="50">
+                <span>${productName}</span>
+                <span>Price: $${price.toFixed(2)}</span>
+                <span>Color: ${color}</span>
+                <span>Size: ${size}</span>
+                <span>Actual Price: $${actualPrice.toFixed(2)}</span>
+                <span>Barcode: ${barcode}</span>
+                <span>Total Price: $${totalPrice.toFixed(2)}</span>
+                <span>Quantity: ${quantity}</span>
+                <button class="cart-item-button" onclick="removeCartItem(this)">Remove</button>
+            `;
+
+            // Update subtotal
+            subtotal += totalPrice;
+            subtotalElement.textContent = `Subtotal: $${subtotal.toFixed(2)}`;
+
+            // Add the item to the cart
+            cartItems.appendChild(cartItem);
+
+            // Show the cart
+            cart.style.display = 'block';
+        }
+
+        function removeCartItem(button) {
+            const cartItem = button.parentElement;
+            const totalPriceElement = cartItem.querySelector('span:last-child');
+            const totalPrice = parseFloat(totalPriceElement.textContent.replace('$', ''));
+
+            // Update subtotal
+            subtotal -= totalPrice;
+            subtotalElement.textContent = `Subtotal: $${subtotal.toFixed(2)}`;
+
+            // Remove the item from the cart
+            cartItems.removeChild(cartItem);
+
+            // Hide the cart if there are no items left
+            if (cartItems.children.length === 0) {
+                cart.style.display = 'none';
+            }
+        }
+
+        function closeCart() {
+            // Hide the cart
+            cart.style.display = 'none';
+        }
+
+        function generateProductTable(productData) {
+            var table = document.createElement('table');
+
+            var headingRow = table.insertRow(0);
+            var headingCell = headingRow.insertCell(0);
+            headingCell.setAttribute('colspan', 2);
+            headingCell.textContent = "Products";
+
+            productData.forEach(function (product, index) {
+                var row = table.insertRow(index + 1);
+                var imageCell = row.insertCell(0);
+                var paragraphCell = row.insertCell(1);
+
+                var img = document.createElement('img');
+                img.src = product.image; // Product image URL
+                img.alt = 'Product Image';
+                imageCell.appendChild(img);
+
+                var productInfo = document.createElement('div');
+                var productName = document.createElement('p');
+                var productPrice = document.createElement('p');
+                var productDescription = document.createElement('p');
+
+                productName.textContent = product.name;
+                productPrice.textContent = product.price;
+                productDescription.textContent = product.description;
+
+                productInfo.appendChild(productName);
+                productInfo.appendChild(productPrice);
+                productInfo.appendChild(productDescription);
+
+                paragraphCell.appendChild(productInfo);
+            });
+
+            return table;
+        }
+        
+    </script>
+</body>
+
+</html>
